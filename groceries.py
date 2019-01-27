@@ -45,8 +45,13 @@ departments = []
 for p in products:
     #print(p["department"])
     #departments.append(p["departmen"])
-    if p["department"] not in departments:
+    # if p["department"] not in departments:
         departments.append(p["department"])
+
+unique_departments = list(set(departments))
+
+
+
 department_count = len(departments)
 
 print("--------------")
