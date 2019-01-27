@@ -52,7 +52,7 @@ unique_departments = list(set(departments))
 
 
 
-department_count = len(departments)
+department_count = len(unique_departments)
 
 print("--------------")
 print("THERE ARE " + str(department_count) + " DEPARTMENTS")
@@ -63,7 +63,11 @@ unique_departments.sort()
 for d in unique_departments:
     matching_products = [p for p in products if p["department"]== d]
     matching_products_count = len(matching_products)
-    print(d.title() + " (" + str(matching_products_count) + " products)")
+    if matching_products_count > 1: 
+        label = "products"
+    else:
+            label = "product"
+    print(" + " + d.title() + " (" + str(matching_products_count) + " " + label + ")")
 
 # --------------
 # THERE ARE 20 PRODUCTS:
