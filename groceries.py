@@ -58,8 +58,10 @@ print("--------------")
 print("THERE ARE " + str(department_count) + " DEPARTMENTS")
 print("--------------")
 
-for d in departments:
-    print(d)
+unique_departments.sort()
+
+for d in unique_departments:
+    print(d.title())
 
 # --------------
 # THERE ARE 20 PRODUCTS:
